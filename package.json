@@ -1,0 +1,20 @@
+{
+  "name": "git-push",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "push": "./src/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "commander": "^12.1.0",
+    "shelljs": "^0.8.5",
+    "simple-git": "^3.27.0"
+  }
+}
