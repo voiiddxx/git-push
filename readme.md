@@ -1,4 +1,6 @@
-# Git Push CLI Tool
+Package Link : https://www.npmjs.com/package/flow-push
+
+## Git Push CLI Tool
 
 I always get tired of running the same Git commands again and again, so I sat down for 30 minutes and created this handy CLI tool to make my life easier—and hopefully yours too! 🚀
 
