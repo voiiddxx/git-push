@@ -21,14 +21,15 @@ To install the package globally, run the following command:
 ```bash
 npm install -g flow-push
 
-```bash
+branch setup only once
+
 push set-branch <branch-name>
 
-```bash
+
 push "commit message"
 
 or
 
-```bash
+
 
 push
