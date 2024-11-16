@@ -43,7 +43,7 @@ program
 
     const config = JSON.parse(fs.readFileSync(configPath, "utf-8"));
     const branch = config.branch;
-    const commitMessage = message || "Quick commit";
+    const commitMessage = message || "Auto Commit from flow";
 
     try {
       
