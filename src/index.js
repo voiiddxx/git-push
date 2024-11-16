@@ -12,6 +12,7 @@ const getConfigPath = () => {
   return path.join(repoRoot, ".push-config.json");
 };
 
+
 program
   .command("set-branch <branch>")
   .description(
@@ -30,14 +31,15 @@ program
     }
   });
 
+  
 program
-  .command("push [message]")
+  .arguments("[message]")
   .description("Push changes to the default branch in the current codebase")
   .action(async (message) => {
     const configPath = getConfigPath();
 
     if (!fs.existsSync(configPath)) {
-      console.error('Error: No default branch set. Run "set-branch" first.');
+      console.error('Error: No default branch set! Run "set-branch" first.');
       process.exit(1);
     }
 
@@ -46,17 +48,14 @@ program
     const commitMessage = message || "Commit from flow";
 
     try {
-      
-        await git.add(".");
+      await git.add(".");
       console.log("Changes staged for commit.");
 
       await git.commit(commitMessage);
       console.log("Changes committed.");
 
       await git.push("origin", branch);
-
       console.log(`Changes pushed to ${branch}.`);
-
     } catch (err) {
       console.error("Git action failed:", err.message);
       process.exit(1);
